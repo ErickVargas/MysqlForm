@@ -1,0 +1,26 @@
+$def with (form,result)
+
+<form name="main" method="post"> 
+
+$:form.render()
+
+<input type="submit" />    </form>
+<table border="1">
+    <th>
+        ID
+    </th>
+    <th>
+        nombre
+    </th>
+    <th>
+        telefono
+    </th>
+    <th>
+        email
+    </th>
+    $for row in result:
+    <tr>
+        <td><a href="/detalles/$row.id_contacto"> $row.id_contacto</a></td><td>$row.nombre</td><td>$row.telefono</td><td>$row.email</td>
+    </tr>
+</table>
+
